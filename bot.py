@@ -679,3 +679,14 @@ async def main():
 # Asosiy ishga tushirish qismi
 if __name__ == "__main__":
     asyncio.run(main())  # Botni boshlash
+
+import requests
+
+def set_webhook():
+    webhook_url = "https://bot-kappa-eight.vercel.app"
+    token = "7984854135:AAHGIrP3G-wgrhT-IY6KaLb5NOtLeu8MGmw"
+    url = f"https://api.telegram.org/bot{token}/setWebhook?url={webhook_url}"
+    response = requests.get(url)
+    print(response.json())
+
+set_webhook()
